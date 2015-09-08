@@ -18,4 +18,9 @@ class Post extends ActiveRecord
         return Post::find()->where(['post_code' => $postCode])->one();
     }
 
+    public function getPostListByPostCode($postCode=[])
+    {
+        return Post::find()->where(['post_code' => $postCode])->all();
+    }
+
 }
